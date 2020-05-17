@@ -28,7 +28,7 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 |username|string|null: false|
-|image|text||
+|image|text|null: false|
 
 ### Association
 - has_many :posts
