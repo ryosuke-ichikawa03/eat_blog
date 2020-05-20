@@ -1,10 +1,16 @@
 .header
   %h1 header
+.search-form
+  %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+-# =form_with url: posts_path do |f|
+-#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
 .contents-row
   - @posts.each do |post|
-    =post.title
-    =post.image
-    =post.text
+    %p=post.title
+    %p=post.image
+    %p=post.text
+.hooter
+  %h1 hooter
 
 
 
