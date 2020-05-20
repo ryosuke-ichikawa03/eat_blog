@@ -1,3 +1,45 @@
 *{
   box-sizing: border-box;
 }
+
+.header{
+  background-color: peru;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.search-form{
+  background-color: pink;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  top:80px
+
+}
+
+.main-box{
+  background-color: yellow;  
+  height: calc(100% - 80px - 100px - 60px);
+  width: 100vw;
+  margin-top: 180px;
+  overflow: scroll;
+  &__contents-row{
+    background-color: sandybrown;
+    height: 400px;
+    width: 600px;
+  }
+}
+
+.footer{
+  background-color: skyblue;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+
+}

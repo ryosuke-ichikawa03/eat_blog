@@ -4,12 +4,13 @@
   %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
 -# =form_with url: posts_path do |f|
 -#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
-.contents-row
-  - @posts.each do |post|
-    %p=post.title
-    %p=post.image
-    %p=post.text
-.hooter
+.main-box
+  .main-box__contents-row
+    - @posts.each do |post|
+      %p=post.title
+      %p=post.image
+      %p=post.text
+.footer
   %h1 hooter
 
 
