@@ -1,4 +1,20 @@
 .header
   %h1 header
-.main
-  %h1 main
+.contents-row
+  - @posts.each do |post|
+    =post.title
+    =post.txet
+
+
+
+  -#   .main-chat__group-message__message-box{data: {message: {id: message.id}}}
+  -# .main-chat__group-message__message-box__message-info
+  -#   .main-chat__group-message__message-box__message-info__message-user
+  -#     = message.user.name
+  -#   .main-chat__group-message__message-box__message-info__message-data
+  -#     = message.created_at.to_s(:datetime_jp)  
+  -# .main-chat__group-message__message-box__message
+  -#   - if message.post.present?
+  -#     %p.main-chat__group-message__message-box__message
+  -#       = message.post
+  -#   = image_tag message.image.url, class: 'main-chat__group-message__message-box__message__image' if message.image.present?
