@@ -38,6 +38,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |title|text|null: false|
+|image|text|null: false|
 |text|text||
 |price|integer|null: false|
 |people|integer|null: false|
