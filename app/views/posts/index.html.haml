@@ -1,28 +1,36 @@
-.header
-  %h1 header
-.search-form
-  %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
--# =form_with url: posts_path do |f|
--#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
-.main-box
-  .main-box__contents-row
-    - @posts.each do |post|
-      %p=post.title
-      %p=post.image
-      %p=post.text
-.footer
-  %h1 hooter
+%html
+  %body.body
+    .header
+      %h1 header
+      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+    -# =form_with url: posts_path do |f|
+    -#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
+
+    .content
+      .content__nav
+        %h1 left
+      .content__main
+        %h1 content 
+        - @posts.each do |post|
+          %p=post.title
+          %p=post.image
+          %p=post.text 
+      .content__right
+        %h1 rigth
+
+    .footer
+      %h1 footer
 
 
 
-  -#   .main-chat__group-message__message-box{data: {message: {id: message.id}}}
-  -# .main-chat__group-message__message-box__message-info
-  -#   .main-chat__group-message__message-box__message-info__message-user
-  -#     = message.user.name
-  -#   .main-chat__group-message__message-box__message-info__message-data
-  -#     = message.created_at.to_s(:datetime_jp)  
-  -# .main-chat__group-message__message-box__message
-  -#   - if message.post.present?
-  -#     %p.main-chat__group-message__message-box__message
-  -#       = message.post
-  -#   = image_tag message.image.url, class: 'main-chat__group-message__message-box__message__image' if message.image.present?
+      -#   .main-chat__group-message__message-box{data: {message: {id: message.id}}}
+      -# .main-chat__group-message__message-box__message-info
+      -#   .main-chat__group-message__message-box__message-info__message-user
+      -#     = message.user.name
+      -#   .main-chat__group-message__message-box__message-info__message-data
+      -#     = message.created_at.to_s(:datetime_jp)  
+      -# .main-chat__group-message__message-box__message
+      -#   - if message.post.present?
+      -#     %p.main-chat__group-message__message-box__message
+      -#       = message.post
+      -#   = image_tag message.image.url, class: 'main-chat__group-message__message-box__message__image' if message.image.present?
