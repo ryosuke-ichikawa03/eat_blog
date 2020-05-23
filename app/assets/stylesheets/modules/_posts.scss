@@ -20,6 +20,8 @@
   }
   &__main{
     flex: 1;
+
+      // @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
   }
   &__right{
     width: 200px;
