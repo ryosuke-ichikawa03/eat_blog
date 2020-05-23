@@ -9,6 +9,16 @@
     .content
       .content__nav
         %h1 left
+        %h3.content__nav__name
+          = current_user.name
+        %ul.content__nav__lists
+          %li.list
+            = link_to do
+              = icon('fas', 'pen-square', class: 'icon')
+          %li.list
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: 'icon')
+
       .content__main
         %h1 content 
         - @posts.each do |post|
