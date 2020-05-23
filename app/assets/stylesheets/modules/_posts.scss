@@ -9,31 +9,46 @@
 }
 
 .header{
+  background-color: #ffffff;
   height: 100px;
+  display: flex;
+  &__rogo{
+    width: 250px;
+    line-height: 100px;
+    text-align: center;
+    
+  }
+  &__input{
+
+  }
+
 }
 
 .content{
   display: flex;
   flex: 1;
   &__nav{
-    width: 150px;
+    background-color: aqua;
+    width: 250px;
     &__name{
 
     }
     &__lists{
-      
+
     }
   }
   &__main{
     flex: 1;
-
+    background-color: #fafafa;
       // @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
   }
   &__right{
+    background-color: aquamarine;
     width: 200px;
   }
 }
 
 .footer{
+  background-color: #d2d2d2;
   height: 60px;
 }

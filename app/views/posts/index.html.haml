@@ -1,8 +1,10 @@
 %html
   %body.body
     .header
-      %h1 header
-      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+      .header__rogo
+        %h1 eat-blog
+      .header__input
+        %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
     -# =form_with url: posts_path do |f|
     -#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
 
@@ -23,8 +25,13 @@
         %h1 content 
         - @posts.each do |post|
           %p=post.title
-          %p=post.image
+          %p= image_tag src="https://public.potaufeu.asahi.com/9b73-p/picture/20762276/04f108af1539c9dba32ae41ff41dace8.jpg"
           %p=post.text 
+        -# .content__main__message
+        -#   - if post.post.present?
+        -#     %p.content__main__message__message
+        -#       = post.post
+        -#   = image_tag message.image.url, class: 'content__main__message__image' if message.image.present?
       .content__right
         %h1 rigth
 
