@@ -6,11 +6,15 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+
 }
 
 .header{
-  background-color: #ffffff;
+  background-color: darkorange;
   height: 100px;
+  width: 100%;
+  position: fixed;
   display: flex;
   &__rogo{
     width: 250px;
@@ -29,11 +33,16 @@
 }
 
 .content{
+  padding: 100px 0px 0px 0px;
   display: flex;
-  flex: 1;
+  // flex: 1; 
   &__nav{
     background-color: aqua;
     width: 250px;
+    height: calc(100vh - 100px);
+    position: fixed;
+    bottom: 0px;
+    table-layout: fixed;
     &__name{
 
     }
@@ -43,16 +52,28 @@
   }
   &__main{
     flex: 1;
+    padding-left: 250px;
     background-color: #fafafa;
+    overflow-y: scroll;
+
+    
       // @include background-image(linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 62%,rgba(0,0,0,0.85) 100%));
   }
   &__right{
     background-color: aquamarine;
+    height: calc(100vh - 100px);
     width: 200px;
-  }
-}
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    table-layout: fixed;    
+    &__footer{
+      height: 60px;
+      width: 200px;
+      position: absolute;
+      bottom: 0px;
+      background-color: #d2d2d2;
 
-.footer{
-  background-color: #d2d2d2;
-  height: 60px;
+    }
+  }
 }
