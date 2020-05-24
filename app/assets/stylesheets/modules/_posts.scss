@@ -27,7 +27,13 @@
     
   }
   &__input{
-
+    position: fixed;
+    right: 0px;
+    &__form{
+      width: 200px;
+      line-height: 100px;
+      margin: 0 auto;
+    }
   }
 
 }
