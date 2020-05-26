@@ -1,0 +1,56 @@
+%html
+  %body.body
+    .header
+      .header__rogo
+        %h1 eat-blog
+      .header__input
+        %input.header__input__form{:placeholder => "キーワード検索", :type => "text"}/
+    -# =form_with url: posts_path do |f|
+    -#  = f.search_field method: get, {:placeholder => "追加したいユーザー名を入力してください", :type => "text"}
+
+    .content
+      .content__nav
+        %h1 left
+        %h3.content__nav__name
+          = current_user.name
+        %ul.content__nav__lists
+          %li.list
+            = link_to do
+              = icon('fas', 'pen-square', class: 'icon')
+          %li.list
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: 'icon')
+
+      .content__main
+        %h1 content 
+        - @posts.each do |post|
+          %p=post.title
+          %p= image_tag src="https://public.potaufeu.asahi.com/9b73-p/picture/20762276/04f108af1539c9dba32ae41ff41dace8.jpg"
+          %p=post.text 
+          %p=post.title
+          %p= image_tag src="https://public.potaufeu.asahi.com/9b73-p/picture/20762276/04f108af1539c9dba32ae41ff41dace8.jpg"
+          %p=post.text 
+        -# .content__main__message
+        -#   - if post.post.present?
+        -#     %p.content__main__message__message
+        -#       = post.post
+        -#   = image_tag message.image.url, class: 'content__main__message__image' if message.image.present?
+      .content__right
+        %h1 rigth
+        .content__right__footer
+          %h1 footer
+
+
+
+
+      -#   .main-chat__group-message__message-box{data: {message: {id: message.id}}}
+      -# .main-chat__group-message__message-box__message-info
+      -#   .main-chat__group-message__message-box__message-info__message-user
+      -#     = message.user.name
+      -#   .main-chat__group-message__message-box__message-info__message-data
+      -#     = message.created_at.to_s(:datetime_jp)  
+      -# .main-chat__group-message__message-box__message
+      -#   - if message.post.present?
+      -#     %p.main-chat__group-message__message-box__message
+      -#       = message.post
+      -#   = image_tag message.image.url, class: 'main-chat__group-message__message-box__message__image' if message.image.present?
